@@ -144,6 +144,24 @@
                     color: var(--primary-color);
                 }
 
+                .mark-todo {
+                    font-size: 20px;
+                    margin-left: 10px;
+                }
+
+                .delete {
+                    font-size: 20px;
+                    font-weight: bold;
+                    color: #d64638;
+                    display: inline-block;
+                    position: absolute;
+                    left: 0; bottom: 0;
+                }
+
+                li {
+
+                    &.done {
+                        text-decoration: line-through;
                     }
                 }
             }
@@ -235,5 +253,23 @@
             display: none;
         }
 
+        .close {
+            position: absolute;
+            top: 20px;left: 20px;
+            color: #d40a0a;
+            cursor: pointer;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .todo-section-desktop {
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: none;
+        }
     }
 }
