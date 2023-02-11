@@ -86,15 +86,15 @@
   color: var(--primary-color);
 }
 
-.todo-section-desktop .todo-container h2 {
+.todo-section-desktop .todo-container h4 {
   text-align: start;
 }
 
-.todo-section-desktop .todo-container h2 svg {
+.todo-section-desktop .todo-container h4 svg {
   margin-bottom: -2px;
 }
 
-.todo-section-desktop .todo-container h2 span {
+.todo-section-desktop .todo-container h4 span {
   font-size: 16px;
   color: var(--primary-color);
   font-weight: lighter;
@@ -146,6 +146,21 @@
 
 .todo-section-desktop .todo-container .all-todo .todo-box {
   padding-right: 20px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  max-width: 100%;
   padding-top: 20px;
   border-bottom: 1px solid rgba(243, 67, 9, 0.5);
 }
@@ -157,6 +172,25 @@
 .todo-section-desktop .todo-container .all-todo .todo-box:hover {
   cursor: pointer;
   color: var(--primary-color);
+}
+
+.todo-section-desktop .todo-container .all-todo .todo-box .mark-todo {
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+.todo-section-desktop .todo-container .all-todo .todo-box .delete {
+  font-size: 20px;
+  font-weight: bold;
+  color: #d64638;
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.todo-section-desktop .todo-container .all-todo .todo-box li.done {
+  text-decoration: line-through;
 }
 
 .todo-section-desktop .todo-container .add-btn {
@@ -187,23 +221,46 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  overflow: hidden;
   z-index: 10;
   top: 50%;
   left: 50%;
   padding: 30px;
   border-radius: 8px;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -250%);
+          transform: translate(-50%, -250%);
   background-color: #fff;
   -webkit-box-shadow: rgba(25, 25, 25, 0.04) 0 0 1px 0, rgba(0, 0, 0, 0.1) 0 3px 4px 0;
           box-shadow: rgba(25, 25, 25, 0.04) 0 0 1px 0, rgba(0, 0, 0, 0.1) 0 3px 4px 0;
 }
 
-.todo-section-desktop .add-new-todo form {
+.todo-section-desktop .add-new-todo::before {
+  content: '';
+  width: 200px;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0px;
+  opacity: 0.3;
+  z-index: -1;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(../img/add-new-todo.webp);
+}
+
+.todo-section-desktop .add-new-todo.active {
+  -webkit-transition: 2s;
+  transition: 2s;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.todo-section-desktop .add-new-todo div {
   width: 100%;
 }
 
-.todo-section-desktop .add-new-todo form input {
+.todo-section-desktop .add-new-todo div input {
   width: 90%;
   padding: 2px 20px;
   border-radius: 0px;
@@ -211,22 +268,44 @@
   border: 1px solid var(--primary-color);
 }
 
-.todo-section-desktop .add-new-todo form input:focus {
+.todo-section-desktop .add-new-todo div input:focus {
   border: 1px solid var(--primary-color);
   -webkit-box-shadow: rgba(25, 25, 25, 0.04) 0 0 1px 0, rgba(0, 0, 0, 0.1) 0 3px 4px 0;
           box-shadow: rgba(25, 25, 25, 0.04) 0 0 1px 0, rgba(0, 0, 0, 0.1) 0 3px 4px 0;
 }
 
-.todo-section-desktop .add-new-todo form button {
+.todo-section-desktop .add-new-todo div button {
   padding: 2px 20px;
-  background-color: transparent;
+  color: #fff;
+  background-color: var(--primary-color);
   border: 1px solid var(--primary-color);
-  color: var(--primary-color);
 }
 
-.todo-section-desktop .add-new-todo form button:hover {
-  color: #fff;
+.todo-section-desktop .add-new-todo div button:hover {
   cursor: pointer;
-  background-color: var(--primary-color);
+  color: var(--primary-color);
+  background-color: transparent;
+}
+
+.todo-section-desktop .add-new-todo .add-content {
+  text-align: center;
+  display: none;
+}
+
+.todo-section-desktop .add-new-todo .close {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  color: #d40a0a;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .todo-section-desktop::after {
+    background-image: none;
+  }
+  .todo-section-desktop::before {
+    background-image: none;
+  }
 }
 /*# sourceMappingURL=style.css.map */
