@@ -12,3 +12,35 @@ search.addEventListener("keyup", function() {
         }    
     });
 });
+
+//show Add New TodoForm
+function showAddNewTodoForm() {
+    let addNewTodo = document.getElementById("add-new-todo");
+    addNewTodo.classList.add('active')
+}
+
+//Add new todo
+let items = JSON.parse(localStorage.getItem('todo-list')) || [];
+let todoError = document.querySelector('.add-content')
+function addItem() {
+    var inputBox = document.querySelector('#todo-input');
+    var item = inputBox.value
+    
+    if (item === ""){
+       return todoError.style.display = 'block';
+    }
+    else {
+        items.push({
+            value: item,
+            time: (new Date()).toLocaleDateString("en-US")
+        })
+        todoError.style.display = 'none';
+        localStorage.setItem('todo-list', JSON.stringify(items));
+    }
+    
+    
+    //listItems();
+    
+    inputBox.value = "";
+  }
+  

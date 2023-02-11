@@ -30,14 +30,15 @@
                 </div> -->
             </div>
 
-            <button class="add-btn">هدف  جديد</button>
+            <button class="add-btn" onclick="showAddNewTodoForm()">هدف  جديد</button>
         </div>
 
-        <div class="add-new-todo">
-            <form>
-                <input type="text" placeholder="اضافة هدف جديد...">
-                <button type="submit">&plus;</button>
-            </form>
+        <div class="add-new-todo" id="add-new-todo">
+            <div>
+                <input type="text" id="todo-input" placeholder="اضافة هدف جديد...">
+                <button  onclick="addItem()">&plus;</button>
+                <span class="add-content">الرجاء ادخال هدف</span>
+            </div>
         </div>
     </section>
 
