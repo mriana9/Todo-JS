@@ -12,17 +12,12 @@ searchBar.addEventListener('keyup', (e) => {
 });
 
 
+
 //show Add New TodoForm
 let addNewTodo = document.getElementById("add-new-todo");
 function showAddNewTodoForm() {
     addNewTodo.classList.add('active')
 }
-
-//Close Add New TodoForm
-function closeForm() {
-    addNewTodo.classList.remove('active')
-}
-
 
 //show all todo items
 let todoCount = 0;
@@ -31,10 +26,6 @@ function todoItems() {
     for (var i = 0; i < items.length; i++) {
       todoCount = items.length
       list+= "<div class='todo-box'>"
-      list += "<span class='mark-todo' onclick='markAsDone("+ i +")'>"+ '&#9634' +"</span> ";
-      list += "<li class="+ (items[i].done ? "done" : "") +">";
-      list += items[i].value + "</li> ";
-      list += "<span class='delete' onclick='deleteItem("+ i +")'>	&#128465 </span>";
       list+= "</div>";
     }
     document.querySelector("#all-todo").innerHTML = list;
@@ -69,13 +60,6 @@ function addItem() {
 function deleteItem(index) {
     items.splice(index, 1);
     localStorage.setItem('todo-list', JSON.stringify(items))
-    todoItems();
-}
-
-
-function markAsDone(index) {
-    items[index].done = !items[index].done;
-    localStorage.setItem('todo-list', JSON.stringify(items));
     todoItems();
 }
 

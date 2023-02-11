@@ -172,25 +172,7 @@
 .todo-section-desktop .todo-container .all-todo .todo-box:hover {
   cursor: pointer;
   color: var(--primary-color);
-}
 
-.todo-section-desktop .todo-container .all-todo .todo-box .mark-todo {
-  font-size: 20px;
-  margin-left: 10px;
-}
-
-.todo-section-desktop .todo-container .all-todo .todo-box .delete {
-  font-size: 20px;
-  font-weight: bold;
-  color: #d64638;
-  display: inline-block;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-}
-
-.todo-section-desktop .todo-container .all-todo .todo-box li.done {
-  text-decoration: line-through;
 }
 
 .todo-section-desktop .todo-container .add-btn {
@@ -279,33 +261,5 @@
   color: #fff;
   background-color: var(--primary-color);
   border: 1px solid var(--primary-color);
-}
 
-.todo-section-desktop .add-new-todo div button:hover {
-  cursor: pointer;
-  color: var(--primary-color);
-  background-color: transparent;
-}
-
-.todo-section-desktop .add-new-todo .add-content {
-  text-align: center;
-  display: none;
-}
-
-.todo-section-desktop .add-new-todo .close {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  color: #d40a0a;
-  cursor: pointer;
-}
-
-@media (max-width: 768px) {
-  .todo-section-desktop::after {
-    background-image: none;
-  }
-  .todo-section-desktop::before {
-    background-image: none;
-  }
-}
 /*# sourceMappingURL=style.css.map */
