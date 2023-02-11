@@ -14,8 +14,8 @@ search.addEventListener("keyup", function() {
 });
 
 //show Add New TodoForm
+let addNewTodo = document.getElementById("add-new-todo");
 function showAddNewTodoForm() {
-    let addNewTodo = document.getElementById("add-new-todo");
     addNewTodo.classList.add('active')
 }
 
@@ -34,6 +34,7 @@ function addItem() {
             value: item,
             time: (new Date()).toLocaleDateString("en-US")
         })
+        addNewTodo.classList.remove('active');
         todoError.style.display = 'none';
         localStorage.setItem('todo-list', JSON.stringify(items));
     }
