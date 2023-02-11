@@ -173,4 +173,60 @@
   color: #fff;
   background-color: var(--primary-color);
 }
+
+.todo-section-desktop .add-new-todo {
+  width: 60vw;
+  height: 40vh;
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 10;
+  top: 50%;
+  left: 50%;
+  padding: 30px;
+  border-radius: 8px;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: #fff;
+  -webkit-box-shadow: rgba(25, 25, 25, 0.04) 0 0 1px 0, rgba(0, 0, 0, 0.1) 0 3px 4px 0;
+          box-shadow: rgba(25, 25, 25, 0.04) 0 0 1px 0, rgba(0, 0, 0, 0.1) 0 3px 4px 0;
+}
+
+.todo-section-desktop .add-new-todo form {
+  width: 100%;
+}
+
+.todo-section-desktop .add-new-todo form input {
+  width: 90%;
+  padding: 2px 20px;
+  border-radius: 0px;
+  outline: none;
+  border: 1px solid var(--primary-color);
+}
+
+.todo-section-desktop .add-new-todo form input:focus {
+  border: 1px solid var(--primary-color);
+  -webkit-box-shadow: rgba(25, 25, 25, 0.04) 0 0 1px 0, rgba(0, 0, 0, 0.1) 0 3px 4px 0;
+          box-shadow: rgba(25, 25, 25, 0.04) 0 0 1px 0, rgba(0, 0, 0, 0.1) 0 3px 4px 0;
+}
+
+.todo-section-desktop .add-new-todo form button {
+  padding: 2px 20px;
+  background-color: transparent;
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+}
+
+.todo-section-desktop .add-new-todo form button:hover {
+  color: #fff;
+  cursor: pointer;
+  background-color: var(--primary-color);
+}
 /*# sourceMappingURL=style.css.map */

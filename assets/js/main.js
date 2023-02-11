@@ -1,6 +1,6 @@
 //Search todo
 let search = document.getElementById("search-btn");
-var todoBox = document.querySelectorAll(".todo-box");
+let todoBox = document.querySelectorAll(".todo-box");
 
 search.addEventListener("keyup", function() {
     Array.prototype.forEach.call(todoBox, function(el) {
