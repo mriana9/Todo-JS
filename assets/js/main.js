@@ -27,8 +27,8 @@ function closeForm() {
 //show all todo items
 let todoCount = 0;
 function todoItems() {
-    var list = "";
-    for (var i = 0; i < items.length; i++) {
+    let list = "";
+    for (let i = 0; i < items.length; i++) {
       todoCount = items.length
       list+= "<div class='todo-box'>"
       list += "<span class='mark-todo' onclick='markAsDone("+ i +")'>"+ '&#9634' +"</span> ";
@@ -38,7 +38,7 @@ function todoItems() {
       list+= "</div>";
     }
     document.querySelector("#all-todo").innerHTML = list;
-    document.querySelector("#todo-count").innerHTML = todoCount +" هدف / أهداف";
+    document.querySelector("#todo-count").innerHTML = todoCount +" هدف / أهداف)";
 }
 
 
@@ -46,8 +46,8 @@ function todoItems() {
 let items = JSON.parse(localStorage.getItem('todo-list')) || [];
 let todoError = document.querySelector('.add-content')
 function addItem() {
-    var inputBox = document.querySelector('#todo-input');
-    var item = inputBox.value
+    let inputBox = document.querySelector('#todo-input');
+    let item = inputBox.value
     
     if (item === ""){
        return todoError.style.display = 'block';
@@ -79,8 +79,14 @@ function markAsDone(index) {
     todoItems();
 }
 
+function startDate() {
+  let d = new Date();
+  let days = ["أحد","الاثنين","الثلاثاء","الاربعاء","الخميس","الجمعة","السبت"];
+  document.getElementById("date").innerHTML = days[d.getDay()]+" (";
+}
 
 // function to run when page loads
 (function() {
     todoItems();
+    startDate();
 })();
