@@ -125,6 +125,13 @@
 
             .todo-box {
                 padding-right: 20px;
+                position: relative;
+                display: flex;
+                align-items: center;
+                flex-direction: row;
+                width: 100%;
+                box-sizing: border-box;
+                max-width: 100%;
                 padding-top: 20px;
                 border-bottom: 1px solid rgba(243, 67, 9, 0.5);
 
@@ -137,14 +144,24 @@
                     color: var(--primary-color);
                 }
 
-                li {
-                    display: flex;
-                    justify-content: space-between;
+                .mark-todo {
+                    font-size: 20px;
+                    margin-left: 10px;
+                }
 
-                    .delete {
-                        font-size: 20px;
-                        font-weight: bold;
-                        color: #d64638;
+                .delete {
+                    font-size: 20px;
+                    font-weight: bold;
+                    color: #d64638;
+                    display: inline-block;
+                    position: absolute;
+                    left: 0;bottom: 0;
+                }
+
+                li {
+
+                    &.done {
+                        text-decoration: line-through;
                     }
                 }
             }
