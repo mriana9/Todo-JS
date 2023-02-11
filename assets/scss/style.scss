@@ -136,6 +136,17 @@
                     cursor: pointer;
                     color: var(--primary-color);
                 }
+
+                li {
+                    display: flex;
+                    justify-content: space-between;
+
+                    .delete {
+                        font-size: 20px;
+                        font-weight: bold;
+                        color: #d64638;
+                    }
+                }
             }
         }
 

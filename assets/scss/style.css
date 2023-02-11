@@ -159,6 +159,21 @@
   color: var(--primary-color);
 }
 
+.todo-section-desktop .todo-container .all-todo .todo-box li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.todo-section-desktop .todo-container .all-todo .todo-box li .delete {
+  font-size: 20px;
+  font-weight: bold;
+  color: #d64638;
+}
+
 .todo-section-desktop .todo-container .add-btn {
   color: var(--primary-color);
   border: 1px solid var(--primary-color);
