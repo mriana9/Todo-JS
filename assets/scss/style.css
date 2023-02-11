@@ -86,15 +86,15 @@
   color: var(--primary-color);
 }
 
-.todo-section-desktop .todo-container h2 {
+.todo-section-desktop .todo-container h4 {
   text-align: start;
 }
 
-.todo-section-desktop .todo-container h2 svg {
+.todo-section-desktop .todo-container h4 svg {
   margin-bottom: -2px;
 }
 
-.todo-section-desktop .todo-container h2 span {
+.todo-section-desktop .todo-container h4 span {
   font-size: 16px;
   color: var(--primary-color);
   font-weight: lighter;
@@ -146,6 +146,21 @@
 
 .todo-section-desktop .todo-container .all-todo .todo-box {
   padding-right: 20px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  max-width: 100%;
   padding-top: 20px;
   border-bottom: 1px solid rgba(243, 67, 9, 0.5);
 }
@@ -157,21 +172,7 @@
 .todo-section-desktop .todo-container .all-todo .todo-box:hover {
   cursor: pointer;
   color: var(--primary-color);
-}
 
-.todo-section-desktop .todo-container .all-todo .todo-box li {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.todo-section-desktop .todo-container .all-todo .todo-box li .delete {
-  font-size: 20px;
-  font-weight: bold;
-  color: #d64638;
 }
 
 .todo-section-desktop .todo-container .add-btn {
@@ -260,16 +261,5 @@
   color: #fff;
   background-color: var(--primary-color);
   border: 1px solid var(--primary-color);
-}
 
-.todo-section-desktop .add-new-todo div button:hover {
-  cursor: pointer;
-  color: var(--primary-color);
-  background-color: transparent;
-}
-
-.todo-section-desktop .add-new-todo .add-content {
-  text-align: center;
-  display: none;
-}
 /*# sourceMappingURL=style.css.map */

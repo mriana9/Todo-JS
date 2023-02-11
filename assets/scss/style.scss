@@ -80,7 +80,7 @@
             color: var(--primary-color);
         }
 
-        h2 {
+        h4 {
             text-align: start;
 
             svg {
@@ -125,6 +125,13 @@
 
             .todo-box {
                 padding-right: 20px;
+                position: relative;
+                display: flex;
+                align-items: center;
+                flex-direction: row;
+                width: 100%;
+                box-sizing: border-box;
+                max-width: 100%;
                 padding-top: 20px;
                 border-bottom: 1px solid rgba(243, 67, 9, 0.5);
 
@@ -137,14 +144,6 @@
                     color: var(--primary-color);
                 }
 
-                li {
-                    display: flex;
-                    justify-content: space-between;
-
-                    .delete {
-                        font-size: 20px;
-                        font-weight: bold;
-                        color: #d64638;
                     }
                 }
             }
@@ -235,5 +234,6 @@
             text-align: center;
             display: none;
         }
+
     }
 }

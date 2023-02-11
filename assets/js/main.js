@@ -1,16 +1,16 @@
 //Search todo
-// let search = document.getElementById("search-btn");
-// let todoBox = document.querySelectorAll(".todo-box");
-// search.addEventListener("keyup", function() {
-//     Array.prototype.forEach.call(todoBox, function(el) {
-//       if (el.textContent.trim().indexOf(search.value) > -1){
-//             el.style.display = 'block';
-//       }
-//       else {
-//             el.style.display = 'none';
-//         }    
-//     });
-// });
+const searchBar = document.querySelector('#search-btn');
+searchBar.addEventListener('keyup', (e) => {
+  const allTodo = document.querySelectorAll(".todo-box");
+  Array.from(allTodo).forEach((el) => {
+    if (el.textContent.trim().indexOf(searchBar.value) > -1) {
+      el.style.display = 'block';
+    } else {
+      el.style.display = 'none';
+    }
+  });
+});
+
 
 
 //show Add New TodoForm
@@ -19,7 +19,6 @@ function showAddNewTodoForm() {
     addNewTodo.classList.add('active')
 }
 
-
 //show all todo items
 let todoCount = 0;
 function todoItems() {
@@ -27,9 +26,6 @@ function todoItems() {
     for (var i = 0; i < items.length; i++) {
       todoCount = items.length
       list+= "<div class='todo-box'>"
-      list += "<li class="+ (items[i].done ? "done" : "") +">";
-      list += items[i].value + " ";
-      list += "<span class='delete' onclick='deleteItem("+ i +")'>	&#128465 </span></li>";
       list+= "</div>";
     }
     document.querySelector("#all-todo").innerHTML = list;
@@ -66,7 +62,6 @@ function deleteItem(index) {
     localStorage.setItem('todo-list', JSON.stringify(items))
     todoItems();
 }
-
 
 
 // function to run when page loads
