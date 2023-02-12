@@ -142,6 +142,10 @@
                 &:hover {
                     cursor: pointer;
                     color: var(--primary-color);
+
+                    .update {
+                        visibility: visible;
+                    }
                 }
 
                 .mark-todo {
@@ -156,6 +160,10 @@
                     display: inline-block;
                     position: absolute;
                     left: 0; bottom: 0;
+                }
+
+                .update {
+                    visibility: hidden;
                 }
 
                 li {
@@ -270,6 +278,34 @@
 
         &::before {
             background-image: none;
+        }
+
+        .todo-container {
+            width: 100%;
+            height: 100%;
+            padding: 10px;
+
+            .all-todo {
+                height: 100%;
+                overflow: auto;
+
+                .todo-box {
+                    padding: 5px;
+                }
+            }
+        }
+
+        .add-new-todo {
+           div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            button {
+                margin-top: 10px;
+            }
+           }
         }
     }
 }

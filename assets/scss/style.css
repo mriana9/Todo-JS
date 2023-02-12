@@ -174,6 +174,10 @@
   color: var(--primary-color);
 }
 
+.todo-section-desktop .todo-container .all-todo .todo-box:hover .update {
+  visibility: visible;
+}
+
 .todo-section-desktop .todo-container .all-todo .todo-box .mark-todo {
   font-size: 20px;
   margin-left: 10px;
@@ -187,6 +191,10 @@
   position: absolute;
   left: 0;
   bottom: 0;
+}
+
+.todo-section-desktop .todo-container .all-todo .todo-box .update {
+  visibility: hidden;
 }
 
 .todo-section-desktop .todo-container .all-todo .todo-box li.done {
@@ -306,6 +314,36 @@
   }
   .todo-section-desktop::before {
     background-image: none;
+  }
+  .todo-section-desktop .todo-container {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+  }
+  .todo-section-desktop .todo-container .all-todo {
+    height: 100%;
+    overflow: auto;
+  }
+  .todo-section-desktop .todo-container .all-todo .todo-box {
+    padding: 5px;
+  }
+  .todo-section-desktop .add-new-todo div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .todo-section-desktop .add-new-todo div button {
+    margin-top: 10px;
   }
 }
 /*# sourceMappingURL=style.css.map */
