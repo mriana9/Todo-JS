@@ -31,10 +31,12 @@ function todoItems() {
     for (let i = 0; i < items.length; i++) {
       todoCount = items.length
       list+= "<div class='todo-box'>"
-      list += "<span class='mark-todo' onclick='markAsDone("+ i +")'>"+ '&#9634' +"</span> ";
-      list += "<li class="+ (items[i].done ? "done" : "") +">";
-      list += items[i].value + "</li> ";
-      list+= "<div>";
+      list+= "<div class='todo-content'>";
+      list += "<div class='mark-todo' onclick='markAsDone("+ i +")'>"+ '&#9634' +"</div> ";
+      list += "<div class="+ (items[i].done ? "done" : "") +">";
+      list += items[i].value + "</div> ";
+      list+= "</div>";
+      list+= "<div class='todo-icon'>";
       list += "<span class='delete' onclick='deleteItem("+ i +")'>	&#128465 </span>";
       list += "<span class='update' onclick='updateItem("+ i +")'>  &#9998 </span>";
       list+= "</div>";
